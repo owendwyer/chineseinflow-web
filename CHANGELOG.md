@@ -1,5 +1,14 @@
 # Changelog
 
+## June 2026
+
+Development is now **AI controlled** — changes are made via Cursor agents, built on Netlify, and deployed from the [chineseinflow-web](https://github.com/owendwyer/chineseinflow-web) repository.
+
+- Migrated to a monorepo (`packages/game` + `packages/site`) with a single `npm run build` pipeline; `dist/` is built on deploy, not committed to git.
+- Deployed to Netlify from the new GitHub repo.
+- **v7.0.1** — version sync between `package.json` and game model.
+- **v7.0.2** — fixed invalid canvas `textBaseline` value (`'center'` → `'middle'`) in `centerText`.
+
 ## Sep 2022
 
 Tidied things up a bit.
