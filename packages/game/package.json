@@ -1,0 +1,24 @@
+{
+	"name": "chineseinflow-game",
+	"version": "7.0.0",
+	"description": "Learn Chinese characters — CreateJS game",
+	"scripts": {
+		"dist": "gulp dist",
+		"test": "gulp test"
+	},
+	"myFiles": [
+		"js/util/*.js",
+		"js/*.js"
+	],
+	"devDependencies": {
+		"gulp": "^4.0.2",
+		"gulp-concat": "^2.6.1",
+		"gulp-jshint": "^2.1.0",
+		"gulp-rename": "^2.0.0",
+		"gulp-tap": "^2.0.0",
+		"gulp-uglify": "^3.0.2",
+		"jshint": "^2.11.0",
+		"yargs": "^15.3.0"
+	},
+	"author": "opd"
+}

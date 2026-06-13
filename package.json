@@ -1,0 +1,16 @@
+{
+  "name": "chineseinflow",
+  "private": true,
+  "description": "Chinese In Flow — static site and CreateJS game",
+  "scripts": {
+    "build": "node build.mjs",
+    "dev": "npm run build && npx serve dist",
+    "postinstall": "npm install --prefix packages/game"
+  },
+  "devDependencies": {
+    "serve": "^14.2.4"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

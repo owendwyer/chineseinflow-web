@@ -1,0 +1,42 @@
+{
+	"index": {
+		"dir": "",
+		"htmlSrc": "index.html"
+	},
+	"about": {
+		"dir": "about",
+		"htmlSrc": "about.html"
+	},
+	"contact": {
+		"dir": "contact",
+		"htmlSrc": "contact.html"
+	},
+	"hsk1": {
+		"dir": "hsk1",
+		"htmlSrc": "hsk1.html"
+	},
+	"hsk2": {
+		"dir": "hsk2",
+		"htmlSrc": "hsk2.html"
+	},
+	"hsk3": {
+		"dir": "hsk3",
+		"htmlSrc": "hsk3.html"
+	},
+	"hsk4": {
+		"dir": "hsk4",
+		"htmlSrc": "hsk4.html"
+	},
+	"hsk5": {
+		"dir": "hsk5",
+		"htmlSrc": "hsk5.html"
+	},
+	"dictionary-app": {
+		"dir": "dictionary-app",
+		"htmlSrc": "dictionaryApp.html"
+	},
+	"app-version": {
+		"dir": "app-version",
+		"htmlSrc": "appVersion.html"
+	}
+}
