@@ -1,6 +1,6 @@
 {
 	"name": "chineseinflow-game",
-	"version": "7.0.1",
+	"version": "7.0.2",
 	"description": "Learn Chinese characters — CreateJS game",
 	"scripts": {
 		"dist": "gulp dist",

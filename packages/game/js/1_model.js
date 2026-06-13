@@ -1,7 +1,7 @@
 
 (function(oG){//checked
 oG.model={
-	version:'7.0.1',
+	version:'7.0.2',
 	orientation:0,
 	canvasRatio:1,
 

@@ -166,7 +166,7 @@ var opdLib={
 	},
 
 	centerText:function($txt){
-		$txt.textBaseline='center';
+		$txt.textBaseline='middle';
 		$txt.textAlign='center';
 	},
 
