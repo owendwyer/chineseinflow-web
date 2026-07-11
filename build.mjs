@@ -40,8 +40,8 @@ function copyAssets() {
 
 	fs.mkdirSync(path.join(distDir, 'css'), { recursive: true });
 	fs.copyFileSync(
-		path.join(siteDir, 'css/cif.1.0.css'),
-		path.join(distDir, 'css/cif.1.0.css')
+		path.join(siteDir, 'css/cif.1.1.css'),
+		path.join(distDir, 'css/cif.1.1.css')
 	);
 	fs.copyFileSync(path.join(siteDir, 'favicon.ico'), path.join(distDir, 'favicon.ico'));
 	fs.copyFileSync(path.join(root, 'CHANGELOG.md'), path.join(distDir, 'CHANGELOG.md'));

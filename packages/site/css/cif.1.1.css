@@ -2619,15 +2619,17 @@ https://github.com/yahoo/pure/blob/master/LICENSE.md
 #my-top{
 	padding:0 40px;
 }
-#my-menu{
-	display:inline-block;
-}
-
 #my-title{
 	width:auto;
 	margin:0px;
 	display:inline-block;
 	text-align:left;
+}
+}
+
+@media screen and (min-width: 1000px) {
+#my-menu{
+	display:inline-block;
 }
 }
 
