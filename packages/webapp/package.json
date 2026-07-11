@@ -1,6 +1,6 @@
 {
 	"name": "chineseinflow-webapp",
-	"version": "0.1.1",
+	"version": "0.1.2",
 	"description": "Chinese In Flow — Pixi.js TypeScript game (production build)",
 	"private": true,
 	"author": "opd"
