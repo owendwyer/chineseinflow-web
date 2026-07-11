@@ -4,8 +4,7 @@
   "description": "Chinese In Flow — static site and CreateJS game",
   "scripts": {
     "build": "node build.mjs",
-    "dev": "npm run build && npx serve dist",
-    "postinstall": "npm install --prefix packages/game"
+    "dev": "npm run build && npx serve dist"
   },
   "devDependencies": {
     "serve": "^14.2.4"

@@ -1,5 +1,13 @@
 # Changelog
 
+## July 2026
+
+Replaced the CreateJS game with the **Pixi.js + TypeScript rewrite** (`webapp`).
+
+- Swapped `packages/game` (CreateJS, v7.0.2) for the vendored Pixi.js production build in `packages/webapp` (v0.1.0).
+- `build.mjs` now copies the prebuilt game assets (`js/`, `res/`, `fonts/`) and assembles the site — no game compile at deploy time.
+- Homepage now embeds the Pixi canvas + preloader; added local webfonts served from `/fonts/`.
+
 ## June 2026
 
 Development is now **AI controlled** — changes are made via Cursor agents, built on Netlify, and deployed from the [chineseinflow-web](https://github.com/owendwyer/chineseinflow-web) repository.

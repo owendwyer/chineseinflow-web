@@ -1,10 +1,9 @@
 import fs from 'fs';
 import path from 'path';
-import { execSync } from 'child_process';
 import { fileURLToPath } from 'url';
 
 const root = path.dirname(fileURLToPath(import.meta.url));
-const gameDir = path.join(root, 'packages/game');
+const webappDir = path.join(root, 'packages/webapp');
 const siteDir = path.join(root, 'packages/site');
 const distDir = path.join(root, 'dist');
 
@@ -31,33 +30,15 @@ function copyDir(src, dest) {
 	}
 }
 
-function buildGame() {
-	console.log('Building game bundle...');
-	execSync('npm run dist', { cwd: gameDir, stdio: 'inherit' });
-}
-
-function copyAssets(version) {
+function copyAssets() {
 	console.log('Copying assets to dist/...');
 	fs.rmSync(distDir, { recursive: true, force: true });
 
-	copyDir(path.join(gameDir, 'content'), path.join(distDir, 'content'));
-	copyDir(path.join(gameDir, 'res'), path.join(distDir, 'res'));
+	copyDir(path.join(webappDir, 'js'), path.join(distDir, 'js'));
+	copyDir(path.join(webappDir, 'res'), path.join(distDir, 'res'));
+	copyDir(path.join(webappDir, 'fonts'), path.join(distDir, 'fonts'));
 
-	fs.mkdirSync(path.join(distDir, 'js'), { recursive: true });
 	fs.mkdirSync(path.join(distDir, 'css'), { recursive: true });
-
-	fs.copyFileSync(
-		path.join(gameDir, 'dist', `all.${version}.js`),
-		path.join(distDir, 'js', `all.${version}.js`)
-	);
-	fs.copyFileSync(
-		path.join(gameDir, 'dist', `all.min.${version}.js`),
-		path.join(distDir, 'js', `all.min.${version}.js`)
-	);
-	fs.copyFileSync(
-		path.join(siteDir, 'vendor/createjs-2015.11.26.min.js'),
-		path.join(distDir, 'js/createjs-2015.11.26.min.js')
-	);
 	fs.copyFileSync(
 		path.join(siteDir, 'css/cif.1.0.css'),
 		path.join(distDir, 'css/cif.1.0.css')
@@ -92,11 +73,12 @@ function buildSite(version) {
 }
 
 function main() {
-	const gamePkg = JSON.parse(fs.readFileSync(path.join(gameDir, 'package.json'), 'utf8'));
-	const version = gamePkg.version;
+	const webappPkg = JSON.parse(
+		fs.readFileSync(path.join(webappDir, 'package.json'), 'utf8')
+	);
+	const version = webappPkg.version;
 
-	buildGame();
-	copyAssets(version);
+	copyAssets();
 	buildSite(version);
 
 	console.log(`Build complete → dist/ (game v${version})`);

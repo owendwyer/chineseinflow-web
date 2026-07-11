@@ -2,19 +2,23 @@
 
 Practice Chinese characters — [chineseinflow.com](https://www.chineseinflow.com)
 
-Monorepo containing the static site and the CreateJS game. Lives at `cif/web/` alongside the `android/` app.
+Monorepo containing the static site and the Pixi.js game. Lives at `cif/` alongside the `android/` app.
 
 ## Structure
 
 ```
 packages/
-  game/   CreateJS game (canvas app, content assets)
-  site/   HTML templates and site CSS
-build.mjs   Builds everything into dist/
+  webapp/   Pixi.js game — vendored production build (js bundle, res, fonts)
+  site/     HTML templates and site CSS
+build.mjs   Assembles everything into dist/
 dist/       Deploy output (gitignored, built by Netlify)
 ```
 
-Site CSS (`packages/site/css/cif.1.0.css`) includes both page layout and game canvas styles. The old `packages/game/css/gameStyle.css` was a subset and is no longer used.
+The game is the Pixi.js + TypeScript rewrite. Its source lives in the separate `webapp/`
+project; the production build (`dist/`) is vendored into `packages/webapp/`. See
+[packages/webapp/README.md](packages/webapp/README.md) for how to refresh it.
+
+Site CSS (`packages/site/css/cif.1.0.css`) includes both page layout and game canvas styles.
 
 ## Development
 
@@ -33,9 +37,12 @@ npm run build
 
 This will:
 
-1. Bundle the game JS (`packages/game` → `dist/js/all.min.{version}.js`)
-2. Copy game assets (`content/`, `res/`)
+1. Copy the vendored game assets (`packages/webapp/{js,res,fonts}` → `dist/`)
+2. Copy site CSS and favicon
 3. Assemble HTML pages from templates into `dist/`
+
+There is no game compile step at deploy time — `packages/webapp/` already holds the
+production build. Rebuild it in the `webapp/` project when the game changes.
 
 ## Deploy
 
@@ -43,8 +50,6 @@ The site is hosted on **Netlify**. Push to the connected branch and Netlify runs
 
 Configuration is in `netlify.toml`. No built files are committed to git.
 
-If the Netlify site is connected to the `cif` repo root, set **Base directory** to `web` in the Netlify site settings (or deploy only from the `web/` directory).
-
 ## Game version
 
-The JS bundle version comes from `packages/game/package.json`. The build injects it into the homepage script tag automatically.
+The JS bundle version comes from `packages/webapp/package.json`. The build injects it into the homepage script tag automatically.

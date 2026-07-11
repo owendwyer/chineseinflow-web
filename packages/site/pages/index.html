@@ -5,6 +5,18 @@
 
 [styleline]
 
+<style>
+	@font-face {
+		font-family: 'Cabin';
+		src: url('/fonts/cabin.woff2') format('woff2');
+	}
+	@font-face {
+		font-family: 'Ubuntu';
+		font-weight: 700;
+		src: url('/fonts/ubuntu.woff2') format('woff2');
+	}
+</style>
+
 [bodystart]
 
 [title]
@@ -16,8 +28,10 @@
 <div id='my-content'>
 
 <div>
-	<div id='containerDiv'>
-		<canvas id='myCanvas' width='1' height='550'></canvas>
+	<div id='containerDiv' style='text-align:center'>
+		<div id='containerDivInner'>
+			<canvas id='preCanvas' width='1' height='550'>Loading…</canvas>
+		</div>
 	</div>
 </div>
 
@@ -36,8 +50,10 @@
 
 [footer]
 
-<script defer src="/js/createjs-2015.11.26.min.js"></script>
+<script src="/js/preloadviewoffline.js"></script>
+<script src="/js/pixi.8.6.4.min.js"></script>
+<script src="/js/gsap.min.js"></script>
+<script src="/js/opd-firebase.min.js"></script>
 <script defer src="/js/all.min.[gameVersion].js"></script>
-<link href="https://fonts.googleapis.com/css?family=Alegreya+Sans:900|Amaranth|Cabin:700|Ubuntu|Kreon:700" rel="stylesheet" type="text/css">
 
 [bottom]

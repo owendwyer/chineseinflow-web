@@ -1,5 +1,3 @@
 node_modules/
 dist/
-packages/game/dist/
-packages/game/node_modules/
 .DS_Store
