@@ -5,7 +5,7 @@ separate `webapp/` project; run its production build there and copy the resultin
 `dist/` artifacts here:
 
 ```
-js/      bundle (all.min.{version}.js) + vendor scripts (pixi, gsap, opd-firebase, preloadviewoffline)
+js/      bundle (all.min.{version}.js) + vendor scripts (pixi, gsap, preloadviewoffline)
 res/     processed content images, sprites, and audio
 fonts/   webfonts (cabin, ubuntu, lato)
 ```
