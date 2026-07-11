@@ -1,42 +1,82 @@
 {
 	"index": {
 		"dir": "",
-		"htmlSrc": "index.html"
+		"htmlSrc": "index.html",
+		"path": "/",
+		"title": "Chinese In Flow — Learn Chinese Characters | HSK Practice Game",
+		"description": "Practice simplified Chinese characters with a fast click-and-match game organized by HSK level. Study 汉字, pinyin, English, or audio — free in your browser.",
+		"sitemapPriority": "1.0"
 	},
 	"about": {
 		"dir": "about",
-		"htmlSrc": "about.html"
+		"htmlSrc": "about.html",
+		"path": "/about/",
+		"title": "About Chinese In Flow — How the Game Helps You Learn",
+		"description": "Learn how Chinese In Flow uses fast recognition practice, repetition, and HSK vocabulary sets to help you study simplified Chinese characters.",
+		"sitemapPriority": "0.6"
 	},
 	"contact": {
 		"dir": "contact",
-		"htmlSrc": "contact.html"
+		"htmlSrc": "contact.html",
+		"path": "/contact/",
+		"title": "Contact — Chinese In Flow",
+		"description": "Contact Owen Dwyer, creator of Chinese In Flow, with feedback or questions about learning Chinese characters.",
+		"sitemapPriority": "0.5"
 	},
 	"hsk1": {
 		"dir": "hsk1",
-		"htmlSrc": "hsk1.html"
+		"htmlSrc": "hsk1.html",
+		"path": "/hsk1/",
+		"title": "HSK 1 Chinese Characters — Chinese In Flow",
+		"description": "HSK 1 vocabulary guide: 150 beginner Chinese characters with sample words, pinyin, and English meanings. Practice them in the game.",
+		"sitemapPriority": "0.8"
 	},
 	"hsk2": {
 		"dir": "hsk2",
-		"htmlSrc": "hsk2.html"
+		"htmlSrc": "hsk2.html",
+		"path": "/hsk2/",
+		"title": "HSK 2 Chinese Characters — Chinese In Flow",
+		"description": "HSK 2 vocabulary overview: 300 Chinese characters for elementary learners, with sample words, pinyin, and English meanings.",
+		"sitemapPriority": "0.8"
 	},
 	"hsk3": {
 		"dir": "hsk3",
-		"htmlSrc": "hsk3.html"
+		"htmlSrc": "hsk3.html",
+		"path": "/hsk3/",
+		"title": "HSK 3 Chinese Characters — Chinese In Flow",
+		"description": "HSK 3 vocabulary: 600 Chinese characters for intermediate beginners, with sample words, pinyin, and English translations.",
+		"sitemapPriority": "0.8"
 	},
 	"hsk4": {
 		"dir": "hsk4",
-		"htmlSrc": "hsk4.html"
+		"htmlSrc": "hsk4.html",
+		"path": "/hsk4/",
+		"title": "HSK 4 Chinese Characters — Chinese In Flow",
+		"description": "HSK 4 vocabulary reference: 1,200 Chinese characters for intermediate learners, with sample words and pinyin.",
+		"sitemapPriority": "0.8"
 	},
 	"hsk5": {
 		"dir": "hsk5",
-		"htmlSrc": "hsk5.html"
+		"htmlSrc": "hsk5.html",
+		"path": "/hsk5/",
+		"title": "HSK 5 Chinese Characters — Chinese In Flow",
+		"description": "HSK 5 advanced vocabulary: 2,500 Chinese characters with sample words, pinyin, and English meanings.",
+		"sitemapPriority": "0.8"
 	},
 	"dictionary-app": {
 		"dir": "dictionary-app",
-		"htmlSrc": "dictionaryApp.html"
+		"htmlSrc": "dictionaryApp.html",
+		"path": "/dictionary-app/",
+		"title": "Hanping Chinese Dictionary — Chinese In Flow",
+		"description": "Recommended offline Chinese dictionary app for Mandarin and Cantonese learners, with links to Hanping Chinese Dictionary.",
+		"sitemapPriority": "0.4"
 	},
 	"app-version": {
 		"dir": "app-version",
-		"htmlSrc": "appVersion.html"
+		"htmlSrc": "appVersion.html",
+		"path": "/app-version/",
+		"title": "Android App — Chinese In Flow",
+		"description": "Download the Chinese In Flow Android app from Google Play — the same HSK character sets as the free web game.",
+		"sitemapPriority": "0.4"
 	}
 }

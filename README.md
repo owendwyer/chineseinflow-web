@@ -18,7 +18,7 @@ The game is the Pixi.js + TypeScript rewrite. Its source lives in the separate `
 project; the production build (`dist/`) is vendored into `packages/webapp/`. See
 [packages/webapp/README.md](packages/webapp/README.md) for how to refresh it.
 
-Site CSS (`packages/site/css/cif.1.1.css`) includes both page layout and game canvas styles.
+Site CSS (`packages/site/css/cif.1.2.css`) includes both page layout and game canvas styles.
 
 ## Development
 
