@@ -7,6 +7,7 @@ const webappDir = path.join(root, 'packages/webapp');
 const siteDir = path.join(root, 'packages/site');
 const distDir = path.join(root, 'dist');
 const SITE_URL = 'https://www.chineseinflow.com';
+const OG_IMAGE_URL = `${SITE_URL}/img/og-image.png`;
 
 const COMPONENT_NAMES = [
 	'top',
@@ -16,6 +17,7 @@ const COMPONENT_NAMES = [
 	'styleline',
 	'title',
 	'bodystart',
+	'play-link',
 ];
 
 function escapeHtml(value) {
@@ -80,6 +82,7 @@ function renderSeo(page) {
 	seo = seo.replaceAll('[pageTitle]', escapeHtml(page.title));
 	seo = seo.replaceAll('[pageDescription]', escapeHtml(page.description));
 	seo = seo.replaceAll('[pageUrl]', pageUrl(page));
+	seo = seo.replaceAll('[ogImageUrl]', OG_IMAGE_URL);
 	seo = seo.replaceAll('[jsonLd]', renderJsonLd(page));
 	return seo;
 }
@@ -111,6 +114,7 @@ function copyAssets() {
 		path.join(distDir, 'css/cif.1.2.css')
 	);
 	fs.copyFileSync(path.join(siteDir, 'favicon.ico'), path.join(distDir, 'favicon.ico'));
+	copyDir(path.join(siteDir, 'img'), path.join(distDir, 'img'));
 	fs.copyFileSync(path.join(root, 'CHANGELOG.md'), path.join(distDir, 'CHANGELOG.md'));
 }
 
