@@ -23,6 +23,14 @@
 		"description": "Contact Owen Dwyer, creator of Chinese In Flow, with feedback or questions about learning Chinese characters.",
 		"sitemapPriority": "0.5"
 	},
+	"privacy": {
+		"dir": "privacy",
+		"htmlSrc": "privacy.html",
+		"path": "/privacy/",
+		"title": "Privacy Policy — Chinese In Flow",
+		"description": "Privacy policy for the Chinese In Flow website and Android app: local progress storage, anonymous usage statistics, and no ads or accounts.",
+		"sitemapPriority": "0.4"
+	},
 	"hsk1": {
 		"dir": "hsk1",
 		"htmlSrc": "hsk1.html",
